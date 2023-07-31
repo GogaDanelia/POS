@@ -1,0 +1,281 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.administration-container {
+    width: 100%;
+    height: 100vh;
+    font-family: 'CustomFont';
+
+}
+.administration-main-grid-container {
+    font-family: 'CustomFont2';
+    height: 100vh;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 260px 1fr 572px;
+    grid-template-rows: 1fr 70px;
+}
+
+
+/* categories list */
+.categories-list-grid a:link, .categories-list-grid a:visited {
+    text-decoration: none;
+    color: #fff;
+
+}
+.amdmin-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.categories-list {
+    background-color: #2f247a;
+}
+.categories-list-grid{
+    display: grid;
+    grid-template-rows: repeat(11,1fr);
+    gap: 10px;
+    color: #fff;
+}
+.list-item {
+    width: 100%;
+    height: 59.78px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #5A519C;;
+    font-size: 26px;
+    font-weight: 700;
+}
+.list-item:hover {
+    background-color: #FFCE00;
+    color: #2F247A;
+}
+.active {
+    background-color: #FFCE00;
+    color: #2F247A;
+}
+.admin {
+    width: 100%;
+    height: 56px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #2F247A;
+    font-weight: 700;
+}
+
+
+
+/* CLIENTS LIST */
+.users-main-container {
+    padding-top: 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    overflow: scroll;
+}
+
+.users-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 70px;
+}
+.user-container-titles {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 25px;
+    padding: 0px 10px;
+    width: 80%;
+    font-family: 'BPG Nino Mtavruli';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 23px;
+    line-height: 12px;
+    letter-spacing: 0.25px;
+    color: #333333;
+}
+.person-container {
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(5,1fr);
+    gap: 20px;
+    padding: 0px 10px;
+    background-color: #FAFAFA;
+    border: 1px solid #E3E3E3;
+    font-size: 18px;
+    font-weight: bold;
+}
+.edit-icon {
+    padding: 20px;
+    background: #3E3389;
+    border-radius: 2px;
+    cursor: pointer;
+}
+.delete-icon {
+    padding: 20px;
+    background: #F31830;
+    border-radius: 2px;
+    cursor: pointer;
+}
+.delete {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+/* ADD NEW USER RIGHT FORM*/
+.create-user-container {
+    padding: 30px 0px;
+    position: relative;
+    border-right: 1.5px solid #A89C9C;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25);
+    font-weight: bold;
+}
+
+.title-new-menu {
+    color: #3E3389;
+    padding-left: 25px;
+    padding-bottom: 20px;
+    font-weight: 700;
+    font-size: 25px;
+}
+.line {
+    width: 100%;
+    height: 1.5px;
+    background-color: #A89C9C;
+}
+.create-user-form {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding: 70px 30px 0px;
+}
+.button-container button{
+    position: absolute;
+    width: 25%;
+    height: 5%;
+    background: #309E3A;
+    border-radius: 60px;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    right: 90px;
+    bottom: 150px;
+    font-size: 25px;
+    font-weight: bold;
+} 
+.create-user-form label {
+    font-family: 'BPG Nino Mtavruli';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 12px;
+    letter-spacing: 0.25px;
+    color: #333333;
+}
+.grid-3-cols {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.grid-3-cols input{
+    width: 80%;
+    height: 35px;
+    outline: none;
+    padding: 10px;
+    font-size: 25px;
+    border: 1px solid #F0F0F0;
+    border-radius: 2px;
+
+}
+.input-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.grid-2-cols {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.drop-down{
+    width: 90%;
+    height: 35px;
+    outline: none;
+    font-size: 25px;
+    border: 1px solid #F0F0F0;
+    border-radius: 2px;
+}
+.birthDate-input {
+    width: 90%;
+    height: 35px;
+    font-size: 25px;
+    border: 1px solid #F0F0F0;
+    outline: none;
+    padding: 10px;
+    border-radius: 2px;
+
+}
+.country-input {
+    width: 45%;
+    height: 35px;
+    font-size: 25px;
+    border: 1px solid #F0F0F0;
+    outline: none;
+    padding: 10px;
+    border-radius: 2px;
+
+}
+.grid-2-cols input{
+    width: 90%;
+    height: 35px;
+    font-size: 25px;
+    border: 1px solid #F0F0F0;
+    outline: none;
+    padding: 10px;
+    border-radius: 2px;
+
+}
+/* footer */
+.mini-footer {
+    width: 100%;
+    background-color: #2f247a;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    grid-column: 1 / -1;
+    padding: 0 30px;
+}
+.img-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.part-of-logo {
+    margin-top: -20px;
+    margin-left: -20px;
+}
+.syllogia-logo {
+   font-size: 35px;
+   color: #fff;
+}
+.close-administration-container a{
+    display: flex;
+    gap: 30px;
+    text-decoration: none;
+}
+.close {
+    color: #fff !important;
+  font-size: 2vw;
+  font-weight: 700;
+  opacity: 100% !important;
+}

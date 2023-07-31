@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administration</title>
+
+    <link rel="stylesheet" href="../users/users.css">
+
+</head>
+<body>
+
+    <div class="administration-container">
+        <div class="administration-main-grid-container">
+            <div class="categories-list">
+                   <div class="amdmin-img">
+                        <img src="../../photos/admin.svg" alt="admin">
+                   </div>
+                   <div class="categories-list-grid">
+                        <a href="../users/users.html"><div class="list-item active">კლიენტები</div></a>
+                        <a href="../tables/tables.html"><div class="list-item">მაგიდები</div>
+                        <a href="../menu/menu.html"><div class="list-item">რესტორნის მენიუ</div></a>
+                        <div class="list-item">თანხის დაბრუნება</div>
+                        <div class="list-item"></div>
+                        <div class="list-item"></div>
+                        <div class="list-item"></div>
+                        <div class="list-item"></div>
+                        <div class="list-item"></div>
+                        <div class="list-item"></div>
+                        <div class="list-item"></div>
+                        <div class="list-item"></div>
+                        <div class="list-item"></div>
+                        <div class="list-item"></div>
+                   </div>
+                   
+            </div>
+
+
+            <div class="users-main-container">
+                <div class="user-container-titles">
+                    <div>პირადი N</div>
+                    <div>სახელი</div>
+                    <div>გვარი</div>
+                    <div>მობილური</div>
+                </div>
+            </div>
+
+            
+            <div class="create-user-container">
+                <h3 class="title-new-menu">მომხმარებლის დამატება</h3>
+                <div class="line"></div>
+                <form class="create-user-form" id="form">
+                    <div class="grid-3-cols">
+                        <div class="personId input-container">
+                            <label for="personId">პირადი N *</label>
+                            <input type="text" id="personId" name="personId"
+                            oninput="this.value = this.value.replace(/[^0-9]/g, '')">
+                        </div>
+                        <div class="firstName input-container">
+                            <label for="firstName">სახელი *</label>
+                            <input type="text" id="firstName" name="firstName">
+                        </div>
+                        <div class="lastName input-container">
+                            <label for="lastName">გვარი *</label>
+                            <input type="text" id="lastName" name="lastName">
+                        </div>
+                    </div>
+                    <div class="grid-2-cols">
+                        <div class="genderTypeId input-container">
+                            <label for="genderTypeId">სქესი *</label>
+                            <select name="genderTypeId" id="genderTypeId" class="drop-down" >  
+                                <option value="1">კაცი</option>
+                                <option value="2">ქალი</option>                          
+                            </select>
+                        </div>  
+                        <div class="birthDate input-container">
+                            <label for="birthDate">დაბადების თარიღი *</label>
+                            <input type="date" name="birthDate" id="birthDate" class="birthDate-input">
+                        </div>  
+                    </div>
+                    <div class="grid-1-col">
+                        <div class="country input-container">
+                            <label for="country">ქვეყანა *</label>
+                            <Input type="text" name="country" id="country" class="country-input">
+                        </div>
+                    </div>
+                    <div class="grid-2-cols">
+                        <div class="city input-container">
+                            <label for="city">ქალაქი *</label>
+                            <Input type="text" name="city" id="city" class="city-input">
+                        </div>
+                        <div class="address input-container">
+                            <label for="address">მისამართი *</label>
+                            <Input type="text" name="address" id="address" class="address-input">
+                        </div> 
+                    </div>
+                    <div class="grid-2-cols">
+                        <div class="mobile input-container">
+                            <label for="mobile">მობილური</label>
+                            <Input type="text" name="mobile" id="mobile" class="mobile-input"
+                            oninput="this.value = this.value.replace(/[^0-9]/g, '')">
+                        </div>
+                        <div class="email input-container">
+                            <label for="email">მეილი</label>
+                            <Input type="email" name="email" id="email" class="email-input">
+                        </div> 
+                    </div>
+                    <div class="button-container">
+                        <button type="submit">დამატება</button>
+                    </div>   
+                </form>
+            </div>
+            <div class="mini-footer">
+                <div class="img-container">
+                    <img src="../../photos/logot.svg" alt="part-of-logo" width="240px" class="part-of-logo">
+                </div>
+                <div class="close-administration-container">
+                    <a href="../../MainPage/index.html">   
+                        <span class="close">დახურვა</span>
+                        <img src="../../photos/dots.svg" alt="dots" width="70px">
+                     </a> 
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="../users/users.js"></script>
+</body>
+</html>

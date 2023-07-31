@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administration</title>
+
+    <link rel="stylesheet" href="../tables/tables.css">
+
+</head>
+<body>
+
+    <div class="administration-container">
+        <div class="administration-main-grid-container">
+                <div class="categories-list">
+                   <div class="amdmin-img">
+                        <img src="../../photos/admin.svg" alt="admin">
+                   </div>
+                   <div class="categories-list-grid">
+
+                        <a href="../users/users.html"><div class="list-item">კლიენტები</div></a>
+                        <a href="../tables/tables.html"><div class="list-item active">მაგიდები</div>
+                        <a href="../menu/menu.html"><div class="list-item">რესტორნის მენიუ</div></a>
+                        <div class="list-item">თანხის დაბრუნება</div>
+                        <div class="list-item"></div>
+                        <div class="list-item"></div>
+                        <div class="list-item"></div>
+                        <div class="list-item"></div>
+                        <div class="list-item"></div>
+                        <div class="list-item"></div>
+                        <div class="list-item"></div>
+                        <div class="list-item"></div>
+                        <div class="list-item"></div>
+                        <div class="list-item"></div>
+                   </div>
+                   
+                </div>
+            
+            <div class="middle-div-main-grid">
+
+                <div class="middle-grid-container-titles">
+                    <div>მაგიდის N</div>
+                    <div>კომენტარი</div>
+                    <div>ფოტო</div>  
+                </div>    
+                <div id="confirmation-dialog" class="popup">
+                    <p>Are you sure you want to delete this item?</p>
+                    <button id="confirm-btn" class="pop-buttons">Yes</button>
+                    <button id="cancel-btn" class="pop-buttons">No</button>
+                </div>
+            </div>
+            <div class="add-new-menu">
+                <h3 class="title-new-menu"> მაგიდის დამატება  </h3>
+                <div class="line"></div>
+                <div class="menu-form">
+                    <div class="input-container">
+                        <label for="code"># *</label>
+                        <input type="number" min="1" max="1000" name="code" id="code" placeholder="მაგიდის N" required>
+                    </div>
+               
+                    <div class="input-container">
+                        <label for="description">კომენტარი</label>
+                        <textarea name="description" id="description" cols="30" rows="10"></textarea>
+                    </div>
+                    <div class="file-upload-container">
+                        <label for="file-upload">ფოტო *</label>
+                        <input type="file" id="file-upload" name="file-upload" accept="image/*" required>
+                    </div>    
+
+                    <div class="button-container" >
+                        <button id="save-btn">შენახვა</button>
+                    </div>
+                </div>
+            </div>
+            <div class="mini-footer">
+                <div class="img-container">
+                    <img src="../../photos/logot.svg" alt="part-of-logo" width="240px" class="part-of-logo">
+                </div>
+                <div class="close-administration-container">
+                    <a href="../../MainPage/index.html">   
+                        <span class="close">დახურვა</span>
+                        <img src="../../photos/dots.svg" alt="dots" width="70px">
+                     </a> 
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="../tables/tables.js"></script>
+</body>
+</html>

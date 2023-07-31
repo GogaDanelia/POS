@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="current-shift.css" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    />
+    <title>Shift Details</title>
+  </head>
+  <body>
+    <div class="administration-container">
+      <div class="administration-main-grid-container">
+        <div class="categories-list">
+          <div class="categories-list-grid">
+            <br /><br />
+            <a href="../dashboard.html"
+              ><div class="list-item">ახალი ცვლა</div></a
+            >
+            <a href="current-shift.html"
+              ><div class="list-item active">აქტიური ცვლები</div></a
+            >
+            <a href="closed-shifts.html"
+              ><div class="list-item">დახურული ცვლები</div></a
+            >
+            <!-- <div class="list-item activecvla" id="closeShift">
+              ცვლის დახურვა
+            </div> -->
+            <div class="list-item unknow"></div>
+          </div>
+        </div>
+
+        <div class="shifts-container">
+          <form class="search-container">
+            <input type="text" placeholder="Search" class="search-input" />
+            <button type="submit" class="search-icon" id="search-icon">
+              <img src="../../photos/search.svg" alt="search" />
+            </button>
+          </form>
+          <table class="table">
+            <thead>
+              <tr>
+                <th id="border-top">N</th>
+                <th id="border-top">დოკუმენტის N</th>
+                <th id="border-top">შექმნის თარიღი</th>
+                <!-- <th id="border-top">დასრულების თარიღი</th> -->
+                <th id="border-top">ჯამური თანხა</th>
+                <th id="border-top">სტატუსი</th>
+                <th id="border-top">მომხმარებელი</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!--
+            <tr class="shift-data-row">
+              <td><div class="row-padding">${index + 1}</div></td>
+              <td><div class="row-padding">${closedShift.id}</div></td>
+              <td><div class="row-padding">${closedShift.shiftDate}</div></td>
+              <td><div class="row-padding">${closedShift.closeDate}</div></td>
+              <td><div class="row-padding">${closedShift.totalBalance}</div></td>
+              <td><div class="row-padding">${closedShift.shiftDocumentStatusName}</div></td>
+              <td><div class="row-padding">${closedShift.userId}</div></td>
+              <td>
+              <div class="row-padding">
+                <img src="../../photos/continue.svg" alt="check" class="icon bg-primary" id="continueShift" title="ცვლის გაგრძელება" data-id="${
+                  activeShift.id
+                }"/>
+                <img src="../../photos/close.png" alt="delete" class="icon bg-danger deleteShift" title="ცვლის დახურვა" data-id="${
+                  activeShift.id
+                }" />
+             </div>
+              </div>
+              </td>
+            </tr>
+            --></tbody>
+          </table>
+          <!-- ცვლის დახურვა -->
+          <div class="dialog-container">
+            <p>ნამდვილად გსურთ ცვლის დახურვა?</p>
+            <div class="btn-container">
+              <button class="confirm">დიახ</button>
+              <button class="cancel">არა</button>
+            </div>
+          </div>
+          <!-- ცვლის დახურვა -->
+          <div class="dialog-container-continue">
+            <p>გსურთ აქტიური ცვლის გაგრძელება?</p>
+            <div class="btn-container">
+              <button class="confirm-continue">დიახ</button>
+              <button class="cancel-continue">არა</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="mini-footer">
+          <div class="img-container">
+            <img
+            src="../../photos/logot.svg"width="230px" height="70px" class="logo"
+            alt="part-of-logo"
+            class="part-of-logo"
+          />
+          </div>
+          <div class="close-administration-container">
+            <a href="../log.html">
+              <span class="closse">დახურვა</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="current-shift.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script> -->
+    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script> -->
+  </body>
+</html>

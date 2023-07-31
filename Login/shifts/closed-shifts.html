@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="closed-shift.css" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    />
+    <title>Shift Details</title>
+  </head>
+  <body>
+    <div class="administration-container">
+      <div class="administration-main-grid-container">
+        <div class="categories-list">
+          <div class="categories-list-grid">
+            <br /><br />
+            <a href="../dashboard.html"
+              ><div class="list-item">ახალი ცვლა</div></a
+            >
+            <a href="current-shift.html"
+              ><div class="list-item">აქტიური ცვლები</div></a
+            >
+            <a href="closed-shifts.html"
+              ><div class="list-item active">დახურული ცვლები</div></a
+            >
+            <!-- <div class="list-item " id="closeShift">
+              ცვლის დახურვა
+            </div> -->
+            <div class="list-item unknow"></div>
+          </div>
+        </div>
+
+        <div class="shifts-container">
+          <form class="search-container">
+            <input type="text" placeholder="Search" class="search-input" />
+            <button type="submit" class="search-icon" id="search-icon">
+              <img src="../../photos/search.svg" alt="search" />
+            </button>
+          </form>
+          <table class="table">
+            <thead>
+              <tr>
+                <th id="border-top">N</th>
+                <!-- <th id="border-top">ცვლის ID</th> -->
+                <th id="border-top">შექმნის თარიღი</th>
+                <th id="border-top">დასრულების თარიღი</th>
+                <th id="border-top">ჯამური თანხა</th>
+                <th id="border-top">სტატუსი</th>
+                <th id="border-top">მომხმარებელი</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!--
+            <tr class="shift-data-row">
+              <td><div class="row-padding">${index + 1}</div></td>
+              <td><div class="row-padding">${closedShift.id}</div></td>
+              <td><div class="row-padding">${closedShift.shiftDate}</div></td>
+              <td><div class="row-padding">${closedShift.closeDate}</div></td>
+              <td><div class="row-padding">${closedShift.totalBalance}</div></td>
+              <td><div class="row-padding">${closedShift.shiftDocumentStatusName}</div></td>
+              <td><div class="row-padding">${closedShift.userId}</div></td>
+              <td>
+                <div class="row-padding">
+                 <img src="../../photos/check.svg" alt="check" class="icon bg-success" data-id="${closedShift.id}"/>
+              <img src="../../photos/eye.svg" alt="look" class="icon" data-id="${closedShift.id}" title="სწრაფი დათვალიერება"/>
+              <img src="../../photos/delete-icon.svg" alt="delete" class="icon bg-danger" class="deleteShift" data-id="${closedShift.id}" />
+                </div>
+              </td>
+            </tr>
+            --></tbody>
+          </table>
+        </div>
+  <!-- ცვლის დათვალიერება -->
+  <div class="dialog-container-view">
+    <p style="font-size: 30px;">გსურთ ცვლის დათვალიერება?</p>
+    <div class="btn-container">
+      <button class="confirm">დიახ</button>
+      <button class="cancel">არა</button>
+    </div>
+  </div>
+        <div class="mini-footer">
+          <div class="img-container">
+            <img
+              src="../../photos/logot.svg"width="230px" height="70px" class="logo"
+              alt="part-of-logo"
+              class="part-of-logo"
+            />
+          </div>
+          <div class="close-administration-container">
+            <a href="../log.html">
+              <span class="closse">დახურვა</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="closed-shifts.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script> -->
+    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script> -->
+  </body>
+</html>

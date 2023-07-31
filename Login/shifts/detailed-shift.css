@@ -1,0 +1,78 @@
+#totalBalance,
+#startingBalance {
+  display: inline-block;
+  padding: 20px;
+  background-color: #f8f9fa;
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 40px;
+  margin-bottom: 20px;
+  text-align: center;
+  flex: 1; 
+}
+
+#totalBalance {
+  background-color: rgb(2, 160, 2);
+}
+
+#startingBalance {
+  background-color: gray;
+}
+
+
+.balance-container {
+  display: flex;
+  justify-content: space-between; 
+  width: 100%; 
+}
+
+.container {
+  background-color: #2f247a;
+  width: 80%;
+  color: white;
+  border-radius: 60px;
+  box-shadow: 0px 25px 25px rgba(0, 0, 0, 0.65);
+  margin-top: 10px;
+}
+
+.centered-text {
+  text-align: center;
+  font-size: 50px;
+  color: orange;
+  font-weight: bold;
+}
+
+th {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.btn.btn-primary {
+  margin-top: 20px;
+  border-radius: 90px;
+  height: 70px;
+  width: 20%; 
+  font-size: 20px;
+  font-weight: bold;
+  background-color: red;
+  border: none;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 70px;
+  margin-left: 40px;
+}
+
+/* Media query for big screens */
+@media screen and (min-width: 1200px) {
+  .btn.btn-primary {
+    margin-top: 10px;
+    height: 80px;
+    width: 15%;
+    font-size: 24px;
+    line-height: 80px;
+    margin-left: 400px;
+  }
+}
+

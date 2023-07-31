@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MainPage</title>
+    <link rel="stylesheet" href="../Fonts/NotoSansGeorgian.ttf">
+    <link rel="stylesheet" href="style.css">
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/sidebars/">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+
+</head>
+<body>
+<!-- leftsidebar -->
+<div class="administration-container">
+    <div class="administration-main-grid-container">
+        <div class="categories-list">
+            <div class="amdmin-img">
+                <!-- logout from index.html  -->
+                <div class="d-flex flex-column flex-shrink-0 p-3 text-white bgcolor" style="width: 280px;">
+                    <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+                        <span class="fs-4">
+                            <div class="dropdown">
+                                <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <img src="../../photos/img_avatar.png" alt="" width="100" height="100" class="rounded-circle mx-auto">
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-dark text-small dropdowntransp " aria-labelledby="dropdownUser1">
+                                    <li><a class="dropdown-item" href="#" id="logoutBtn">გამოსვლა</a></li>
+                                </ul>
+                            </div>
+                        </span>
+                    </a>
+                </div>
+            </div>
+            <br>
+            <br>
+            <br>
+            <div class="categories-list-grid">
+                <div class="list-item"></div>
+                <div class="list-item"></div>
+                <div class="list-item"></div>
+                <div class="list-item"></div>
+                <div class="list-item"></div>
+                <div class="list-item"></div>
+                <div class="list-item"></div>
+                <div class="list-item"></div>
+                <div class="list-item"></div>
+            </div>
+            <img src="../../photos/logot.svg" width="240px"  class="logo">
+        </div>
+        <!-- leftsidebar -->
+        <!-- middle-sidebar  -->
+            <div class="middle-products-container">
+<!-- <button onclick="closeDay()">Close day</button> -->
+
+                <div class="search-bar-container">
+                <form class="search-container">
+                    <input type="text" placeholder="Search" class="search-input">
+                    <button type="submit"  class="search-icon" id="search-icon">
+                        <img src="../photos/search.svg" alt="search">
+                    </button>                    
+                </form>
+                </div>
+                <div class="products-container">
+                </div>
+            </div>
+        <!-- middle-sidebar  -->
+            <div class="right-container">
+                <div class="basket-titles">
+                    <div class="product-title">კოდი</div>
+                    <div class="product-title">დასახელება</div>
+                    <div class="product-title">რაოდენობა</div>
+                    <div class="product-title">ფასი</div>
+                    <div class="product-title">ჯამური ფასი</div>
+                </div>
+                
+                <div class="right-basket-container"></div>
+                <div id="confirmation-dialog" class="popup">
+                    <p class="delalert">ნამდვილად გსურთ ამ პროდუქტის წაშლა?</p>
+                    <button id="confirm-btn" class="yes-buttons">დიახ</button>
+                    <button id="cancel-btn" class="no-buttons">არა</button>
+                </div> 
+                
+                <div class="terminal">
+                    <img src="../photos/clear.png" alt="clear" width="70px" height="70px" id="empty-button">    
+
+
+                    
+                  </div>
+                  <!-- pay box -->
+                  <div id="numeric-container" class="input-numericmain">
+                    <br>
+                    <p class="prc">
+                      თანხა <input class="input-numeric" type="text" />
+                    </p>
+                    <table class="table-numeric">
+                      <tbody>
+                        <tr>
+                          <td><button type="button" class="key" data-key="1">1</button></td>
+                          <td><button type="button" class="key" data-key="2">2</button></td>
+                          <td><button type="button" class="key" data-key="3">3</button></td>
+                          <td>
+                            <button type="button" class="key-del" data-key="del" style="background-color:red; color: white;">&#x2190;</button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td><button type="button" class="key" data-key="4">4</button></td>
+                          <td><button type="button" class="key" data-key="5">5</button></td>
+                          <td><button type="button" class="key" data-key="6">6</button></td>
+                          <td><button type="button" class="key dot" data-key=".">.</button></td>
+                        </tr>
+                        <tr>
+                          <td><button type="button" class="key" data-key="7">7</button></td>
+                          <td><button type="button" class="key" data-key="8">8</button></td>
+                          <td><button type="button" class="key" data-key="9">9</button></td>
+                          <td><button type="button" class="key" data-key="0">0</button></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <div>
+                      <button class="agree">დათანხმება</button>
+                      <button class="cancel">გაუქმება</button>
+                    </div>
+                  </div>
+                  
+                    <div id="big-box" style="display: none;">
+                        <div class="box1" id="cashPay"><span class="cashmargin">ქეში</span> </div>
+                        <div class="box2" id="payWithCard"><span class="visamargin">ბარათი</span></div> 
+                    </div>
+            </div>
+
+<!-- footer -->
+
+<div class="mini-footer">
+    <a href="../Orders/order.html">
+      <button type="button" class="btn btn-primary btn-lg order-button">
+        <div class="orders">
+          <img src="../photos/order.svg" alt="orders">
+        </div>
+      </button>
+    </a>
+    
+    <button type="button" class="btn btn-success btn-lg save-button"id="saveBtn">
+      <div class="saves">
+        <img src="../photos/save.svg" alt="save" >
+      </div>
+    </button>
+  <div class="pay-container">
+    <div class="pay">
+      <button class="buttonpay" onclick="pay()">
+        <img src="../photos/Pay.png" alt="pay" width="100px">
+      </button>
+    </div>
+  
+    <div class="price-sum">
+        <div class="price">სულ: ₾ <span class="total-price"></span></div>
+    </div>
+    <div class="dots">
+        <a href="../Login/dashboard.html"> <img src="../photos/dotsve.svg" alt="dotsve" width="12px"></a>
+    </div>
+    </div>
+</div>
+</div>
+
+<!-- footer -->
+
+    <script src="script.js"></script>
+    <script>
+        const logoutBtn = document.getElementById('logoutBtn');
+        logoutBtn.addEventListener('click', () => {
+            location.href = '../Login/log.html';
+        });
+        // const shiftBtn = document.getElementById('shiftBtn');
+        // shiftBtn.addEventListener('click', () => {
+        //     location.href = '../Login/dashboard.html';
+        // });
+        document.getElementById('payWithCard').addEventListener('click', function() {
+  var newBox1 = document.createElement('div');
+  newBox1.className = 'TBC';
+  newBox1.style.backgroundColor = 'BLUE';
+
+  var newBox2 = document.createElement('div');
+  newBox2.className = 'BOG';
+  newBox2.style.backgroundColor = 'RED';
+
+  document.getElementById('big-box').appendChild(newBox1);
+  document.getElementById('big-box').appendChild(newBox2);
+});     
+    </script>
+</body>
+</html>

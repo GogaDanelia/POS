@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="styleLog.css">
+</head>
+<body>
+   <div class="dialog-container">
+      <p>ფიქსირდება აქტიური ცვლა, გსურთ გაგრძელება?</p>
+      <div class="btn-container">
+         <button class="confirm">დიახ</button>
+         <button class="cancel">არა</button>
+      </div>
+   </div>
+
+   <div class="left">
+      <h1>
+         <div class="background">
+            <div class="shape"></div>
+            <div class="shape"></div>
+         </div>
+         <form id="login-form">
+            <img src="../photos/author.svg" alt="" class="img1">
+            <h3>
+               ავტორიზება
+            </h3>
+            <br>
+            <label for="username" class="user">მომხმარებელი</label>
+            <input type="text" placeholder="" id="username" name="username">
+            <label for="password" class="user">პაროლი</label>
+            <div class="password-container">
+               <input type="password" placeholder="" id="password" name="password">
+               <input type="checkbox" class="showPassword" id="showPassword" onchange="togglePasswordVisibility()">
+            </div>
+
+            <label class="user">აირჩიეთ POS</label>
+            <br>
+            <div class="custom-select">
+               <select name="pos" id="pos" class="pos">
+                  <option>Select Pos</option>
+               </select>
+            </div>
+            <button class="button button2" id="loginBtn" type="submit">Log in</button>
+         </form>
+      </div>
+   </div>
+
+   <div class="right">
+
+      <div class="slider-container">
+         <div class="slider">
+           <img src="../photos/12.jpeg" alt="Image 1">
+           <img src="../photos/13.jpeg" alt="Image 2">
+           <img src="../photos/14.jpeg" alt="Image 3">
+         </div>
+       </div>
+       
+
+
+   </div>
+   
+   <script src="slider.js"></script>
+   <script src="login.js"></script>
+</body>
+</html>

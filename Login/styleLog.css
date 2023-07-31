@@ -1,0 +1,268 @@
+@font-face {
+  font-family: 'CustomFont2';
+  src: url('../Fonts/bpg_mrgvlovani_caps_2010.ttf') format('truetype');
+
+}
+body{
+  overflow: hidden;
+}
+::placeholder{
+  color: #e5e5e5;
+}
+*,
+*:before,
+*:after{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.background{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transform: translate(-50%,-50%);
+  left: 50%;
+  top: 50%;
+  
+}
+form{
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  transform: translate(-50%,-50%);
+  top: 50%;
+  left: 50%;
+  padding: 30px 25px;
+  outline: none;
+}
+
+label{
+  display: block;
+  margin-top: 30px;
+  font-size: 22px;
+  font-weight: 300;
+  color: gray;
+}
+
+.user{
+  font-family: 'CustomFont2';
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+}
+input{
+  display: block;
+  height: 50px;
+  width: 100%;
+  background-color: transparent;
+  margin-top: 8px;
+  font-size: 24px;
+  font-weight: 300;
+  outline: none;
+  border-bottom:2px solid gray;
+  border-left: none;
+  border-top: none;
+  border-right: none;
+  color: white;
+}
+
+.button {
+  font-family: 'CustomFont2';
+  margin-top: 50px;
+  margin-left: 20%;
+  background-color: red;
+  border-radius: 5px solid black;
+  background-color: E40000; 
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 40px;
+  width: 60%;
+  height: 10%;
+  color: white;
+}
+
+.button2:hover {
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.left,.right {
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+.left {
+  left: 0;
+  background-color:#3E3389;
+  height: 100%;
+  width: 50%;
+}
+.right {
+  right: 0;
+  background-color: white;
+  height: 100%;
+  width:50%;
+}
+
+h3{
+  font-size: 50px;
+  margin-left:72px;
+  margin-top: -69px;
+  color: white;
+  font-weight: 300;
+}
+ .option{
+  width: 350px;
+  height:50px;
+  background-color: transparent;
+  color: white;
+
+} 
+select {
+  background-color: transparent;
+  border:0px;
+  outline:0px;
+  border-radius: 0;
+  width: 330px;
+  height:50px;
+  font-size: 22px;
+  color: gray;
+
+}
+/* slider */
+.slider-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  margin: 0 auto;
+  margin-top: -20px;
+}
+
+.slider {
+  display: flex;
+  transition: transform 0.3s ease;
+}
+
+.slider img {
+  width: 100%;
+  height: 100vh; 
+  object-fit: cover;
+  object-position: right; 
+}
+
+@media (max-width: 767px) {
+  .slider-container {
+    width: 100%;
+  }
+}
+
+
+/* ?slider  */
+.showPassword{
+  width: 15px;
+  height: 15px;
+}
+
+ .password-container {
+  position: relative;
+}
+
+.password-container input[type="password"] {
+  padding-right: 30px;
+}
+
+.password-container input[type="checkbox"] {
+  position: absolute;
+  top: 50%;
+  right: 5px;
+  transform: translateY(-50%);
+}
+
+.password-container label {
+  position: absolute;
+  top: 50%;
+  right: 35px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  user-select: none;
+}
+
+
+.dialog-container {
+  z-index: 10000;
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #FAFAFA;
+  padding: 50px;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 25px;
+  border: 1px solid black;
+  box-shadow: 0px 45px 45px rgba(0, 0, 0, 0.8);
+  border-radius: 40px;
+
+}
+h2 {
+  margin-top: 0;
+}
+.btn-container {
+  margin-top: 20px;
+}
+.btn-container button {
+  margin-right: 10px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.btn-container button.confirm {
+    border: none;
+    padding: 25px 64px ;
+    max-width: 200px;
+    cursor: pointer;
+    margin-top: 8px;
+    border-radius: 40px;
+    background-color: green;
+    color: white;
+    box-shadow: 0px 25px 25px rgba(0, 0, 0, 0.4);
+    font-size: 25px;
+
+}
+.btn-container button.cancel {
+  border: none;
+  padding: 25px 64px ;
+  cursor: pointer;
+  margin-top: 8px;
+  border-radius: 40px;
+  max-width: 200px;
+  background-color: red;
+  color: white;
+  box-shadow: 0px 25px 25px rgba(0, 0, 0, 0.4);
+  font-size: 25px;
+}
+.custom-select {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  height:6%;
+  line-height: 34px;
+  background-color: white;
+  border-radius: 40px;
+  padding: 0 12px;
+  font-size: 14px;
+  color: black;
+}
+.pos{
+  background-color: transparent;
+  width: 100%;
+  border-radius: none;
+  color: black;
+}
