@@ -15,20 +15,18 @@
     <link rel="stylesheet" href="../Fonts/bpg_mrgvlovani_caps_2010.ttf" />
   </head>
   <body>
-    <div class="orders-container">
-      <a href="../MainPage/index.html"
-        ><button class="btn btn-secondary">უკან დაბრუნება</button></a
-      ><br>
-      <br><br>
-      <div class="table-header">
-        <div class="header-cell">N</div>
-        <div class="header-cell">დოკუმენტის N</div>
-        <div class="header-cell">გადახდის ტიპი</div>
-        <div class="header-cell">ფასი</div>
-        <div class="header-cell">სტატუსი</div>
-        <!-- <div class="header-cell">შეკვეთის ID</div> -->
-      </div>
+
+
       <div id="basketProducts">
+        <div class="header fixed-header">
+          <ul>
+            <th>N</th>
+            <th>დოკუმენტის-N</th>
+            <th>გადახდის-ტიპი</th>
+            <th>ფასი</th>
+            <th>სტატუსი</th>
+          </ul>
+        </div>
         <div class="dialog-container">
           <p>ნამდვილად გსურთ შეკვეთის წაშლა?</p>
           <div class="btn-container">
@@ -36,10 +34,14 @@
             <button class="cancel">არა</button>
           </div>
         </div>
-        <!-- ცვლის დათვალიერების ბოქსი -->
-         
+        <div class="right-sidebar">
+          
+ 
+        </div>
           <div id="box" class="hidden">
-            <button id="closeButton" class="btn btn-danger">Close</button>
+            <div class="print">
+              <img src="../photos/print.svg" alt="" width="60px">
+            </div>
             <h3 id="orderNumber"></h3>
             <ul class="list-group">
               <li class="list-group-item"><strong id="remainingPayment"></strong></li>
@@ -47,38 +49,66 @@
               <li class="list-group-item"><strong id="totalBalance"></strong></li>
             </ul>
             <table class="table">
-              <thead>
+              <thead >
                 <tr>
                   <th>N</th>
-                  <th>შტრიხ კოდი</th>
-                  <th>შიდა კოდი</th>
+                  <th>შტრიხ კოდი</th> 
+                  <th>შიდა-N</th>
                   <th>დასახელება</th>
-                  <th>ერთეულის ფასი</th>
+                  <th>ფასი</th>
                   <th>რაოდენობა</th>
-                  <th>ჯამური თანხა</th>
+                  <th>ჯამი</th>
                 </tr>
               </thead>
-              <tbody id="tableBody"></tbody>
+              <tbody id="tableBody">
+                <!-- The table body content remains unchanged. -->
+              </tbody>
             </table>
           </div>
-          
 
         <div class="order-status"></div>
 
         <div class="table-body"></div>
+
       </div>
+      
       <div class="pagination-container">
         
         <button id="previous-page-button" class="btn btn-primary">Previous</button>
-
         <ul class="pagination"></ul>
           <button id="next-page-button" class="btn btn-primary">Next</button>
         </div>
       </div>
-      <!-- <button class="btn btn-success" id="cancel-order">გადახდა</button> -->
-      <!-- <button class="btn btn-danger" id="delete-order">წაშლა</button> -->
-      <!-- <button class="btn btn-warning" id="edit">რედაქტირება</button> -->
     </div>
+   
+<!-- footer -->
+
+<div class="mini-footer">
+  <a href="../MainPage/index.html">
+    <div type="button" class="logo">
+      
+    </div>
+  </a>
+<div class="pay-container">
+  <div class="pay">
+  </div>
+  <div class="logo">
+    <img src="../photos/logot.svg" alt="" width="250px" height="100px">
+  </div>
+      <div class="back">
+  <a href="../MainPage/index.html">
+        <img src="../photos/back.svg" alt="back" width="60px">
+  </a>
+      </div>
+      <div>
+      </div>
+  <div class="price-sum">
+  </div>
+  </div>
+</div>
+</div>
+
+<!-- footer -->
 
     <script src="orders.js"></script>
   </body>

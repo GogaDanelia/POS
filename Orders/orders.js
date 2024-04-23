@@ -21,7 +21,6 @@ function fetchOrdersData(page) {
         const cell3 = document.createElement("div");
         const cell4 = document.createElement("div");
         const cell5 = document.createElement("div");
-        const cell6 = document.createElement("div");
 
         const editButton = document.createElement("img");
         const deleteButton = document.createElement("img");
@@ -90,8 +89,8 @@ function fetchOrdersData(page) {
         cell3.textContent = "₾ " + order.price;
         cell4.textContent = order.orderStatusName;
         cell5.appendChild(editButton);
-        cell5.appendChild(deleteButton);
         cell5.appendChild(viewButton);
+        cell5.appendChild(deleteButton);
         // cell5.appendChild(payButton);
 
         // cell6.textContent = order.id;
@@ -123,7 +122,13 @@ function fetchOrdersData(page) {
 
 
               const orderNumber = document.getElementById("orderNumber");
-              orderNumber.textContent = `შეკვეთის ინფორმაცია : N ${data.documentNumber}`
+              orderNumber.textContent = `შეკვეთის ინფორმაცია N : ${data.documentNumber}`;
+              orderNumber.style.color = "#3e3389";
+
+              const totalBalanceElement =
+                document.getElementById("totalBalance");
+              totalBalanceElement.classList.add("text-primary");
+              totalBalanceElement.textContent = `სულ გადასახდელი თანხა: ₾${data.price}`;
 
               const remainingPayment =
                 document.getElementById("remainingPayment");
@@ -134,10 +139,7 @@ function fetchOrdersData(page) {
               paymentsMade.classList.add("text-success");
               paymentsMade.textContent = ` გადახდილი თანხა: ₾${data.paymentsMade}`;
 
-              const totalBalanceElement =
-                document.getElementById("totalBalance");
-              totalBalanceElement.classList.add("text-primary");
-              totalBalanceElement.textContent = ` ჯამური თანხა: ₾${data.price}`;
+              
 
               data.orderItems.forEach((item, index) => {
                 const row = document.createElement("tr");
@@ -313,3 +315,4 @@ nextPageButton.addEventListener("click", () => {
   pageNumber++;
   fetchOrdersData(pageNumber);
 });
+

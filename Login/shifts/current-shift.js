@@ -1,3 +1,7 @@
+let TBCpoint = "http://localhost:6678/v104"
+let BOGpoint = "http://localhost:6679/v104"
+
+
 const posId = localStorage.getItem("posId");
 // Variable to keep track of the active shifts
 const activeShifts = [];
@@ -22,6 +26,8 @@ function closeShift(id) {
   dialogContainer.style.display = "block";
   // Confirmation
   document.querySelector(".confirm").addEventListener("click", () => {
+    // closeDay
+ 
     console.log("closeShift");
     fetch("http://5.152.108.245:8088/api/v1/shiftdocument/close", {
       method: "PATCH",
@@ -35,6 +41,8 @@ function closeShift(id) {
     })
       .then((response) => {
         if (response.status === 200) {
+          closeDay(TBCpoint)
+          closeDay(BOGpoint)
           alert("ცვლა წარმატებით დაიხურა");
           dialogContainer.style.display = "none";
           location.reload();
@@ -100,7 +108,7 @@ function displayClosedShifts() {
           <td><div class="row-padding">${activeShift.userId}</div></td>
           <td>
             <div class="row-padding">
-              <img src="../../photos/continue.svg" alt="check" class="icon" id="continueShift" title="ცვლის გაგრძელება" data-id="${
+              <img src="../../photos/continue.svg" alt="check" class="icon" id="continueShift" title="ცვლის გაგრძელება"  data-id="${
                 activeShift.id
               }"/>
               <img src="../../photos/reload.svg" alt="delete" class="icon bg-warning deleteShift" title="ცვლის დახურვა" data-id="${
@@ -130,3 +138,40 @@ function displayClosedShifts() {
     });
   });
 }
+
+
+
+function closeDay(bankEndPoint) {
+  fetch(`${bankEndPoint}/executeposcmd`, {
+    method: "POST",
+    headers: {
+      "Content-type": "application/json",
+      Authorization: `Bearer ${JSON.parse(
+        localStorage.getItem("accessToken")
+      )}`,
+    },
+    body: JSON.stringify({
+      header: {
+        command: "CLOSEDAY",
+      },
+      params: {
+        // operatorId: "<Cashier's Identifier>",
+        // operatorName: "<Cashier's Name>",
+      },
+    }),
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      console.log(data, "Close day data");
+    })
+    .catch((err) => {
+      console.log("Error during close day:", err);
+    });
+}
+
+// function closeDayBOG(){
+//   closeDay(BOGpoint)
+// }
+// function closeDayTBC(){
+//   closeDay(TBCpoint)
+// }
